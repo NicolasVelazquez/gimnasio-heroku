@@ -14,8 +14,8 @@ const AddClass = props => {
   const [editing, setEditing] = useState(false)
   const [initialClassState, setInitialClassState] = useState("")
   const [name, setName] = useState(initialClassState.name)
-  const [scheduleDays, setScheduleDays] = useState(initialClassState.scheduleDays)
-  const [scheduleHours, setScheduleHours] = useState(initialClassState.scheduleHours)
+  const [scheduleDays, setScheduleDays] = useState([])
+  const [scheduleHours, setScheduleHours] = useState([])
 
   useEffect(() => {
     if (props.location.state && props.location.state.currentClass) {
@@ -54,7 +54,6 @@ const AddClass = props => {
     } else {
       setScheduleDays(scheduleDays.filter(item => item !== day.name))
     }
-    console.log(scheduleDays)
   }
 
   const setHours = (hour) => {
@@ -63,7 +62,6 @@ const AddClass = props => {
     } else {
       setScheduleHours(scheduleHours.filter(item => item !== hour.name))
     }
-    console.log(scheduleHours)
   }
 
   function compareDays(a, b) { return days.indexOf(a) - days.indexOf(b); }
@@ -129,7 +127,7 @@ const AddClass = props => {
             <div className="form-group">
               <h2 htmlFor="description">{editing ? "Editar" : "Crear"} Clase</h2>
               <div className="form-group">
-                <label for="inputEmail4">Nombre</label>
+                <label htmlFor="name">Nombre</label>
                 <input
                   type="text"
                   className="form-control"

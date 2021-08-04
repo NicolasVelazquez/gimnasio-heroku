@@ -76,8 +76,8 @@ const AddMember = props => {
           <div className="card-body">
             <div className="form-group">
               <h2 htmlFor="description">{editing ? "Editar" : "Crear"} Socio</h2>
-              <div class="form-group">
-                <label for="inputEmail4">Nombre</label>
+              <div className="form-group">
+                <label htmlFor="inputEmail4">Nombre</label>
                 <input
                   type="text"
                   className="form-control"
@@ -85,10 +85,10 @@ const AddMember = props => {
                   defaultValue={member.name}
                   onChange={(e) => setName(e.target.value)}
                   placeholder='Nombre'
-                  maxlength="20"
+                  maxLength="20"
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label>Apellido</label>
                 <input
                   type="text"
@@ -97,10 +97,10 @@ const AddMember = props => {
                   defaultValue={member.lastName}
                   onChange={(e) => setLastName(e.target.value)}
                   placeholder='Apellido'
-                  maxlength="20"
+                  maxLength="20"
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label>Email</label>
                 <input
                   type="email"
@@ -109,10 +109,10 @@ const AddMember = props => {
                   defaultValue={member.email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder='Email'
-                  maxlength="20"
+                  maxLength="20"
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label>Fecha de Nacimiento</label>
                 <input
                   type="date"
@@ -123,16 +123,16 @@ const AddMember = props => {
                   placeholder='Fecha de Nacimiento'
                 />
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label>Género</label>
-                <select class="custom-select" defaultValue={member.genre} onChange={(e) => setGenre(e.target.value)}>
+                <select className="custom-select" defaultValue={member.genre} onChange={(e) => setGenre(e.target.value)}>
                   <option selected>Género</option>
                   <option value="No Informado">Prefiero no decirlo</option>
                   <option value="Femenino">Femenino</option>
                   <option value="Masculino">Masculino</option>
                 </select>
               </div>
-              <div class="form-group">
+              <div className="form-group">
                 <label>Número de Teléfono</label>
                 <input
                   type="tel"
@@ -140,7 +140,7 @@ const AddMember = props => {
                   defaultValue={member.phonenumber}
                   onChange={(e) => setPhonenumber(e.target.value)}
                   placeholder='Teléfono'
-                  maxlength="15"
+                  maxLength="15"
                 />
               </div>
             </div>

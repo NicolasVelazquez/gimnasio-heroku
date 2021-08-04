@@ -22,7 +22,7 @@ app.use("/api/gimnasio", gimnasio)
 
 console.log(process.env.NODE_ENV)
 
-if(process.env.NODE_ENV === "prod") {
+if(process.env.NODE_ENV === "production") {
     app.use(express.static(path.join(path.dirname(''), '/frontend/build')))
 
     app.get('*', (req, res) => {
